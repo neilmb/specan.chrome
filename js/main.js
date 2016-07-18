@@ -94,32 +94,9 @@ function updatePower(line) {
 }
 
 function plotReadings(readings) {
-  $.plot('#graphics', [{data: readings}],
-        {
-          series: {
-            lines: { show: true },
-            points: { show: true }
-          },
-          xaxis: {
-            ticks: 20
-          },
-          yaxis: {
-            ticks: 10,
-            min: -100,
-            max: 0,
-            tickDecimals: 0
-          },
-          grid: {
-            backgroundColor: { colors: [ "#fff", "#eee" ] },
-            borderWidth: {
-              top: 1,
-              right: 1,
-              bottom: 2,
-              left: 2
-            }
-          }
-         }
-       );
+  document.getElementById('plotly_sandbox').contentWindow.postMessage(
+    { command: 'plot',
+      readings: readings }, '*');
 }
 
 function readDetector() {
