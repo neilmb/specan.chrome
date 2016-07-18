@@ -5,9 +5,9 @@ const INITIAL_FREQUENCY = 14150000;
 var connectedId = null;
 var frequency = INITIAL_FREQUENCY;
 
-var from_frequency = 4000000;
-var to_frequency = 12000000;
-var step_size = 100000;
+var from_freq_init = 4.0;
+var to_freq_init = 25.0;
+var step_size_init = 500;
 
 var sweep_readings = [];
 
@@ -125,6 +125,12 @@ function connect(e) {
 
 function sweep(e) {
   console.log('Sweep clicked!');
+
+  // Get parameters for this sweep
+  from_frequency = (Number(document.getElementById('from_freq').value)*1000000).toFixed(0);
+  to_frequency = (Number(document.getElementById('to_freq').value)*1000000).toFixed(0);
+  step_size = (Number(document.getElementById('step_size').value)*1000).toFixed(0);
+
   setFrequency(from_frequency);
   writeSerial('t' + to_frequency.toString() + '\n');
   writeSerial('s' + step_size + '\n');
@@ -145,6 +151,10 @@ function loadDevices(ports) {
 function main() {
   /* Load the serial devices */
   serial.getDevices(loadDevices);
+  // Fill sweep parameter defaults
+  document.getElementById('from_freq').value = from_freq_init;
+  document.getElementById('to_freq').value = to_freq_init;
+  document.getElementById('step_size').value = step_size_init;
 }
 
 addEventListener('DOMContentLoaded', function () {

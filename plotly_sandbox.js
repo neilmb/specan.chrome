@@ -33,6 +33,7 @@ window.addEventListener('message', function(event) {
           pad: 4
         }
       };
-      Plotly.plot('graphics', [trace], layout);
+      Plotly.purge('graphics');
+      Plotly.newPlot('graphics', [trace], layout);
   }
 });
