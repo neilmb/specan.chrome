@@ -48,21 +48,30 @@
           <div>
             Power Level: <span id="power"></span>
           </div>
-          <form class="form-inline">
+          <form>
             <div class="form-group">
-              <div class="input-group-addon">From:</div>
-              <input id="from_freq" class="form-control"/>
-              <div class="input-group-addon">MHz</div>
+              <label class="sr-only" for="from_freq">From frequency (in MHz)</label>
+              <div class="input-group">
+                <div class="input-group-addon">From:</div>
+                <input id="from_freq" class="form-control"/>
+                <div class="input-group-addon">MHz</div>
+              </div>
             </div>
             <div class="form-group">
-              <div class="input-group-addon">To:</div>
-              <input id="to_freq" class="form-control"/>
-              <div class="input-group-addon">MHz</div>
+              <label class="sr-only" for="to_freq">To frequency (in MHz)</label>
+              <div class="input-group">
+                <div class="input-group-addon">To:</div>
+                <input id="to_freq" class="form-control"/>
+                <div class="input-group-addon">MHz</div>
+              </div>
             </div>
             <div class="form-group">
-              <div class="input-group-addon">Step Size</div>
-              <input id="step_size" class="form-control"/>
-              <div class="input-group-addon">kHz</div>
+              <label class="sr-only" for="step_size">Step Size (in kHz)</label>
+              <div class="input-group">
+                <div class="input-group-addon">Step Size</div>
+                <input id="step_size" class="form-control"/>
+                <div class="input-group-addon">kHz</div>
+              </div>
             </div>
           </form>
         </div>
