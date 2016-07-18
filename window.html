@@ -7,6 +7,8 @@
     <!-- Scripts -->
     <script src="js/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flot.min.js"></script>
+
 
     <!-- Cascading Style Sheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -38,11 +40,13 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-8">
-          Graphics Display
+          <div id="graphics" style="width:700px;height:550px;"></div>
         </div>
 
         <div class="col-xs-4 bg-info">
-          Info sidebar
+          <div>
+            Power Level: <span id="power"></span>
+          </div>
         </div>
 
       </div>
