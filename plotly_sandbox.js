@@ -23,13 +23,13 @@ window.addEventListener('message', function(event) {
           title: 'Power Level (dBm)'
         },
         autosize: false,
-        width: 750,
-        height: 550,
+        width: 720,
+        height: 600,
         margin: {
           l: 50,
-          r: 50,
+          r: 10,
           b: 80,
-          t: 20,
+          t: 10,
           pad: 4
         }
       };

@@ -1,7 +1,7 @@
 chrome.app.runtime.onLaunched.addListener(function() {
   chrome.app.window.create('window.html', {
     'outerBounds': {
-      'width': 950,
+      'width': 970,
       'height': 700
     },
     id: 'SpecanID'
